@@ -137,7 +137,7 @@ square3.addEventListener("click", () => {
 
     // Redirect with UPDATED inventory
     setTimeout(function () {
-      window.location.replace(`https://nnn9t3.csb.app/?inv=${newInv}`);
+      window.location.replace(`https://stitchg.github.io/Final_Room_Time/?inv=${newInv}`);
     }, 2000);
   }
 });
@@ -161,7 +161,7 @@ function showModal() {
   document.getElementById("myModal").style.display = "flex";
 }
 function vault() {
-  window.location.replace(" https://nnn9t3.csb.app/");
+ window.location.replace(`https://stitchg.github.io/Final_Room_Time/?inv=${newInv}`);
 }
 // Close the modal
 function closeBruhModal() {
@@ -169,3 +169,4 @@ function closeBruhModal() {
   modal.classList.remove("show");
   modal.classList.add("hide");
 }
+
