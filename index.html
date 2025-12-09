@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Menu_style.css" />
+    <title>SummerTime CodeSandbox</title>
+  </head>
+  <body>
+    <div class="row1 center2">
+      <div class="box1"></div>
+      <div class="box1">
+        
+      </div>
+      <div class="box1 center-content">
+        <img src="Images/statue.png" onclick="stoneStatue()" id="lion" />
+      </div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+     
+    <div class="row2"></div>
+
+    <div class="row3">
+      <div class="box1"></div>
+      <div class="box1 center-content">
+        <img src="Images/number1cursive.png" class="light" id="square1" />
+      </div>
+      <div class="box1 center-content">
+        <img src="no/number1game.png" class="light" id="square2" />
+      </div>
+      <div class="box1 center-content">
+        <img src="thinnumbers/number1thin.png" class="light" id="square3" />
+      </div>
+      <div class="box2"></div>
+    </div>
+
+    <div class="row4">
+      <div class="box1 center-content">
+        <img src="Images/lantern.png" onclick="paperlantern()" id="japanese" />
+      </div>
+      <div cla ss="box1"></div>
+      <div class="box1"></div>
+      <div class="box1"></div>
+      <div class="box2 center-content">
+        <img src="Images/bowl.png" onclick="ancientbowl()" id="ancient" />
+      </div>
+    </div>
+
+    <div class="row5">
+      <div class="bottom center">
+        <div class="smol-box  center-content">
+          <img src="" id="inventory1"/>
+        </div>
+        <div class="smol-box  center-content">
+          <img src="" id="inventory2"/>
+        </div>
+        <div class="smol-box ">
+          <img src="" id="inventory3"/>
+        </div>
+        <div class="smol-box ">
+          <img src="" id="inventory4"/>
+        </div>
+        <div class="smol-box ">
+          <img src="" id="inventory5"/>
+        </div>
+        <div class="smol-box ">
+          <img src="" id="inventory6"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- build your layout inside of the "modal-body" and treat it like a second <body> of your page -->
+    <div class="modal center-content" id="myModal">
+      <span class="close" onclick="hideModal()">&times;</span>
+      <div class="modal-body">
+        <div class="modal-split  center-content">
+        <img src="Images/radish.png" />
+      </div>
+        <div class="modal-split  center-content">
+        <img src="Images/katana.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- MENU MODAL -->
+  <div class="menumodal Lcenter-content" id="menumodal">
+    <span class="close" onclick="hideMenuModal()">&times;</span>
+    <div class="menumodal-body Lcenter-content">
+
+      <!-- MAIN MENU -->
+      <div id="menuPage" class="menu-page">
+        <h2 class="menu-title">⧖ TIME KEEPER CONSOLE</h2>
+        <button class="menu-btn" onclick="openNotes()">📜 Time Keeper’s Note</button>
+        <button class="menu-btn" onclick="openPortalStatus()">🌀 Portal Status</button>
+        <button class="menu-btn" onclick="openInventory()">🎒 Inventory</button>
+        <button class="menu-btn" onclick="openSettings()">⚙️ Settings</button>
+        <button class="menu-btn" onclick="openHelp()">❓ Help</button>
+        <p class="menu-footer">“Your human blood is the key.”</p>
+        <p class="timekeeper-textZ">
+          ALWAYS REMEMBER THE MENU I LEFT FOR YOU HAS THE HINTS NEEDED TO
+          BANISH THE MONSTER
+        </p>
+      </div>
+
+      <!-- NOTES PAGE -->
+      <div id="notesPage" class="menu-page hidden">
+        <h2 class="menu-title">📜 Time Keeper’s Notes</h2>
+        <button class="menu-btn" onclick="showHint(1)">Portal 1 Hint</button>
+        <button class="menu-btn" onclick="showHint(2)">Portal 2 Hint</button>
+        <button class="menu-btn" onclick="showHint(3)">Portal 3 Hint</button>
+        <button class="menu-btn" onclick="showHint(4)">Portal 4 Hint</button>
+        <button class="menu-btn locked" id="portal5Hint" disabled> Portal 5 Hint (Locked)</button>
+        <button class="menu-btn back-btn" onclick="returnToMenu()">← Back</button>
+        <p id="hintText" class="hint-output"></p>
+      </div>
+
+      <!-- PORTAL STATUS PAGE -->
+      <div id="statusPage" class="menu-page hidden">
+        <h2 class="menu-title">🌀 Portal Status</h2>
+        <p id="portalStatus1" class="status-line help-text">Portal 1: In Progress</p>
+        <p id="portalStatus2" class="status-line help-text">Portal 2: - </p>
+        <p id="portalStatus3" class="status-line help-text">Portal 3: - </p>
+        <p id="portalStatus4" class="status-line help-text">Portal 4: - </p>
+        <p id="portalStatus5" class="status-line help-text locked">Portal 5: Not Ready</p>
+        <button class="menu-btn back-btn" onclick="returnToMenu()">← Back</button>
+      </div>
+
+      <!-- INVENTORY PAGE -->
+      <div id="inventoryPage" class="menu-page hidden">
+        <h2 class="menu-title">🎒 Inventory</h2>
+
+        <div class="center">
+          <div class="smol-box1"><img src="" id="" class="" /></div>
+          <div class="smol-box1"><img src="" id="" class="" /></div>
+          <div class="smol-box1"><img src="" id="" class="" /></div>
+          <div class="smol-box1"><img src="" id="" class="" /></div>
+          <div class="smol-box1"><img src="" id="" class="" /></div>
+          <div class="smol-box1"><img src="" id="" class="" /></div>
+        </div>
+        <ul id="inventoryList"></ul>
+        <button class="menu-btn back-btn" onclick="returnToMenu()">← Back</button>
+      </div>
+
+
+      <!-- HELP PAGE -->
+      <div id="helpPage" class="menu-page hidden">
+        <h2 class="menu-title red-alert">❗ HELP REQUESTED ❗</h2>
+        <p class="help-text">A signal has been sent to the 4 Keys to Midnight team.</p>
+        <p class="help-text">Stand by... we’re coming.</p>
+        <button class="menu-btn back-btn" onclick="returnToMenu()">← Back</button>
+      </div>
+    </div>
+  </div>
+    <!-- NEW MODAL, visible on page load -->
+    <div class="new-modal show" id="bruhModal">
+      <button class="new-close" onclick="closeBruhModal()">&times;</button>
+      <div class="new-modal-body">
+        <h1>
+          Match the numbers in order 
+        </h1>
+      </div>
+    </div>
+  <button id="Menu" onclick="timeKeepersmenu()">MENU</button>
+  <audio src="audio\backroundmusic.mp3" type="audio/mp3" id="lol"></audio>
+  <script>
+    document.addEventListener(
+      "click",
+      () => {
+        document.getElementById("lol").play();
+      },
+      { once: true }
+    );
+  </script>
+    <script src="script.js"></script>
+    <script src="Menu_script.js"></script>
+  </body>
+</html>
