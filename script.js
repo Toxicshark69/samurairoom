@@ -162,14 +162,15 @@ function paperlantern() {
 
 function hideModal() {
   document.getElementById("myModal").style.display = "none";
+  window.location.replace(`https://stitchg.github.io/Final_Room_Time/?inv=${newInv}`);
 }
 function showModal() {
   document.getElementById("myModal").style.display = "flex";
-  window.location.replace("https://stitchg.github.io/Final_Room_Time/");
+  window.location.replace(`https://stitchg.github.io/Final_Room_Time/?inv=${newInv}`);
 
 }
 function vault() {
-  window.location.replace("https://stitchg.github.io/Final_Room_Time/");
+  window.location.replace(`https://stitchg.github.io/Final_Room_Time/?inv=${newInv}`);
 }
 // Close the modal
 function closeBruhModal() {
@@ -177,4 +178,5 @@ function closeBruhModal() {
   modal.classList.remove("show");
   modal.classList.add("hide");
 }
+
 
