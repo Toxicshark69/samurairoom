@@ -169,8 +169,7 @@ function showModal() {
 
 }
 function vault() {
-  window.location.replace(" https://nnn9t3.csb.app/");
-
+  window.location.replace("https://stitchg.github.io/Final_Room_Time/");
 }
 // Close the modal
 function closeBruhModal() {
@@ -178,3 +177,4 @@ function closeBruhModal() {
   modal.classList.remove("show");
   modal.classList.add("hide");
 }
+
