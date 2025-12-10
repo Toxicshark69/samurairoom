@@ -1,3 +1,4 @@
+
 // --------------- INVENTORY CODE --------------- //
 console.log("window.location.href =", window.location.href);
 console.log("window.location.search =", window.location.search);
@@ -61,6 +62,11 @@ square1.addEventListener("click", () => {
     showModal();
   }
 });
+
+function getFilename(path) {
+  return path.split("/").pop();
+}
+
 
 // Define the images in the cycle in order
 const numberCycle1 = [
@@ -159,9 +165,12 @@ function hideModal() {
 }
 function showModal() {
   document.getElementById("myModal").style.display = "flex";
+  window.location.replace("https://stitchg.github.io/Final_Room_Time/");
+
 }
 function vault() {
- window.location.replace(`https://stitchg.github.io/Final_Room_Time/?inv=${newInv}`);
+  window.location.replace(" https://nnn9t3.csb.app/");
+
 }
 // Close the modal
 function closeBruhModal() {
@@ -169,4 +178,3 @@ function closeBruhModal() {
   modal.classList.remove("show");
   modal.classList.add("hide");
 }
-
